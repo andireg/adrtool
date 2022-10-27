@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace AdrTool.Core
@@ -14,12 +15,12 @@ namespace AdrTool.Core
 
         public RecordManager(IInputOutputUtils inputOutputUtils, string baseFolder)
         {
-            this.inputOutputUtils= inputOutputUtils;
+            this.inputOutputUtils = inputOutputUtils;
             this.baseFolder = baseFolder;
             templatesFolder = inputOutputUtils.Combine(baseFolder, Defaults.TemplateFolder);
             docsFolder = inputOutputUtils.Combine(baseFolder, Defaults.DocsFolder);
             defaultTemplateFilename = inputOutputUtils.Combine(templatesFolder, $"{Defaults.DefaultTemplateName}.md");
-            regex = new(Defaults.DocFilename.Replace(".", "\\.").FormatWithObject(new { number = "([0-9]*)", title = "(.*)" }));
+            regex = new (Defaults.DocFilename.Replace(".", "\\.").FormatWithObject(new { number = "([0-9]*)", title = "(.*)" }));
         }
 
         public async Task InitAsync()
@@ -53,7 +54,8 @@ namespace AdrTool.Core
             int newNumber = GetNextNumber(thisFolder);
             string filename = inputOutputUtils.Combine(thisFolder, Defaults.DocFilename.FormatWithObject(new { number = newNumber, title = titleOnly }));
             string templateContent = await inputOutputUtils.ReadFileAsync(templateFilename);
-            string content = templateContent.FormatWithObject(new { date = DateTime.Now, title = titleOnly });
+            object param = new { date = DateTime.Now, title = titleOnly };
+            string content = templateContent.FormatWithObject(param);
             await inputOutputUtils.WriteFileAsync(filename, content);
             await ReindexAsync();
         }
@@ -108,6 +110,7 @@ namespace AdrTool.Core
 
         private async Task ReindexFolderAsync(string folder)
         {
+            Debug.WriteLine($"Reindex '{folder}'");
             string contentFiles = string.Join(
                 Environment.NewLine,
                 inputOutputUtils.GetFiles(folder)

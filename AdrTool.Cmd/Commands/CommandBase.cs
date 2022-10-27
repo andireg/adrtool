@@ -11,7 +11,7 @@ namespace AdrTool.Cmd.Commands
             AddOption(FolderOption);
         }
 
-        protected Option<DirectoryInfo?> FolderOption { get; } = new("--folder", "Root-folder of the architecture decision record.");
+        protected Option<DirectoryInfo?> FolderOption { get; } = new ("--folder", "Root-folder of the architecture decision record.");
 
         protected static void Process<T>(DirectoryInfo? directory, Action<IRecordManager, T> action, T payload)
         {

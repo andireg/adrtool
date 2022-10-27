@@ -4,7 +4,7 @@ namespace AdrTool.Cmd.Commands
 {
     internal class AddTemplateCommand : CommandBase
     {
-        private readonly Argument<string> nameArgument = new(null, description: "Name of the template");
+        private readonly Argument<string> nameArgument = new (null, description: "Name of the template");
 
         public AddTemplateCommand()
             : base("add", "Adds a template")

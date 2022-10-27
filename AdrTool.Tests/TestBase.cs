@@ -24,10 +24,9 @@ namespace AdrTool.Tests
             InputOutputUtilsMock
                 .Setup(mock => mock.GetDirectories(It.IsAny<string>()))
                 .Returns(Enumerable.Empty<string>());
-
         }
 
-        protected Mock<IInputOutputUtils> InputOutputUtilsMock { get; } = new();
+        protected Mock<IInputOutputUtils> InputOutputUtilsMock { get; } = new ();
 
         protected RecordManager RecordManager => recordManager ??= new RecordManager(InputOutputUtilsMock.Object, "z:\\UnitTest");
     }

@@ -2,7 +2,8 @@
   "profiles": {
     "AdrTool": {
       "commandName": "Project",
-      "commandLineArgs": "init"
+      "commandLineArgs": "reindex",
+      "workingDirectory": "D:\\Temp"
     }
   }
 }

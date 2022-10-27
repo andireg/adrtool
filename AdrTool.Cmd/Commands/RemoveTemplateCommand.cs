@@ -4,7 +4,7 @@ namespace AdrTool.Cmd.Commands
 {
     internal class RemoveTemplateCommand : CommandBase
     {
-        private readonly Argument<string> nameArgument = new(null, description: "Name of the template");
+        private readonly Argument<string> nameArgument = new (null, description: "Name of the template");
 
         public RemoveTemplateCommand()
             : base("remove", "Removes a template")
