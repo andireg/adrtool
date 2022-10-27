@@ -15,7 +15,7 @@ namespace AdrTool.Tests
 
             InputOutputUtilsMock
                 .Setup(mock => mock.GetFileName(It.IsAny<string>()))
-                .Returns((string filename) => Path.GetFileName(filename));
+                .Returns((string filename) => filename.Split("\\", StringSplitOptions.RemoveEmptyEntries).Last());
 
             InputOutputUtilsMock
                 .Setup(mock => mock.GetFiles(It.IsAny<string>()))
