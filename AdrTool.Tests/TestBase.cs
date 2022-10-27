@@ -11,7 +11,7 @@ namespace AdrTool.Tests
         {
             InputOutputUtilsMock
                 .Setup(mock => mock.Combine(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns((string p1, string p2) => Path.Combine(p1, p2));
+                .Returns((string p1, string p2) => $"{p1}\\{p2}".Replace("\\\\", "\\"));
 
             InputOutputUtilsMock
                 .Setup(mock => mock.GetFileName(It.IsAny<string>()))

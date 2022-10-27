@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-namespace SwissLife.Slkv.Tools.ArchitectureDecisionRecord.Commands
+namespace AdrTool.Cmd.Commands
 {
     internal class InitCommand : CommandBase
     {

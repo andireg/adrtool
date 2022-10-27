@@ -1,7 +1,7 @@
 ﻿using System.CommandLine;
 using AdrTool.Core;
 
-namespace SwissLife.Slkv.Tools.ArchitectureDecisionRecord.Commands
+namespace AdrTool.Cmd.Commands
 {
     internal abstract class CommandBase : Command
     {

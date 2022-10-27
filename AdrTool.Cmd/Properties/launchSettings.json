@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "SwissLife.Slkv.Tools.ArchitectureDecisionRecord": {
+    "AdrTool": {
       "commandName": "Project",
       "commandLineArgs": "init"
     }
