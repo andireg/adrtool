@@ -14,7 +14,7 @@
 | ---:| --- | --- |
 {%folders}{%files}";
 
-        internal const string IndexFolderLineTemplate = "| | {%folderName} | [Link]({%folderName}/index.md) |";
+        internal const string IndexFolderLineTemplate = "| | {%folderName} | [Link]({%folderName}.md) |";
         internal const string IndexFileLineTemplate = "| {%number:0000} | {%title} | [Link]({%filename}) |";
     }
 }

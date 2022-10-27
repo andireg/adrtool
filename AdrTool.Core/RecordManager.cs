@@ -113,6 +113,7 @@ namespace AdrTool.Core
         private async Task ReindexFolderAsync(string folder)
         {
             Debug.WriteLine($"Reindex '{folder}'");
+            string folderName = inputOutputUtils.GetFileName(folder);
             string contentFiles = string.Join(
                 Environment.NewLine,
                 inputOutputUtils.GetFiles(folder)
@@ -120,7 +121,12 @@ namespace AdrTool.Core
                     .Where(x => x.match.Success)
                     .OrderBy(x => int.Parse(x.match.Groups[1].Value))
                     .Select(x => Defaults.IndexFileLineTemplate.FormatWithObject(
-                        new { number = x.match.Groups[1].Value, title = x.match.Groups[2].Value.Replace("-", " "), filename = inputOutputUtils.GetFileName(x.filename) })));
+                        new 
+                        { 
+                            number = x.match.Groups[1].Value,
+                            title = x.match.Groups[2].Value.Replace("-", " "),
+                            filename = $"{folderName}/{inputOutputUtils.GetFileName(x.filename)}",
+                        })));
 
             IEnumerable<string> subFolders = inputOutputUtils.GetDirectories(folder);
 
@@ -135,7 +141,7 @@ namespace AdrTool.Core
                 contentFolders += Environment.NewLine;
             }
 
-            string indexFilename = inputOutputUtils.Combine(folder, $"..\\{inputOutputUtils.GetFileName(folder)}.md");
+            string indexFilename = inputOutputUtils.Combine(folder, $"..\\{folderName}.md");
             string content = Defaults.IndexTemplate.FormatWithObject(new { folders = contentFolders, files = contentFiles });
             await inputOutputUtils.WriteFileAsync(indexFilename, content);
             await Task.WhenAll(subFolders.Select(ReindexFolderAsync));
