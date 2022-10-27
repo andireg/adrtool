@@ -11,6 +11,6 @@ namespace AdrTool.Cmd.Commands
         }
 
         private void Execute(DirectoryInfo? directory)
-            => Process(directory, static mgr => mgr.InitAsync());
+            => Process(directory, static mgr => mgr.InitAsync().GetAwaiter().GetResult());
     }
 }

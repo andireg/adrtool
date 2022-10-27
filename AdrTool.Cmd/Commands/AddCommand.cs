@@ -16,6 +16,9 @@ namespace AdrTool.Cmd.Commands
         }
 
         private void Execute(string title, DirectoryInfo? directory, string? template)
-            => Process(directory, static (mgr, param) => mgr.AddRecordAsync(param.title, param.template), new { title, template });
+            => Process(
+                directory, 
+                static (mgr, param) => mgr.AddRecordAsync(param.title, param.template).GetAwaiter().GetResult(), 
+                new { title, template });
     }
 }
