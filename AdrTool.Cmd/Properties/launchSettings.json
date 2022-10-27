@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SwissLife.Slkv.Tools.ArchitectureDecisionRecord": {
+      "commandName": "Project",
+      "commandLineArgs": "init"
+    }
+  }
+}

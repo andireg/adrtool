@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AdrTool.Cmd</AssemblyName>
+    <RootNamespace>AdrTool.Cmd</RootNamespace>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>adr</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <LangVersion>latest</LangVersion>
+    <Authors>Andreas Regner</Authors>
+    <Description>Tiny dotnet tool to manage ADR (architecture decision records) documentation</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SwissLife.Slkv.CodeAnalyzing.Analyzer" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdrTool.Core\AdrTool.Core.csproj" />
+  </ItemGroup>
+
+</Project>
