@@ -22,7 +22,7 @@ namespace AdrTool.Tests
             // assert
             InputOutputUtilsMock.Verify(
                 mock => mock.WriteFileAsync(
-                    "z:\\UnitTest\\docs\\folder\\0012-new record.md",
+                    "z:\\UnitTest\\docs\\folder\\0012-new-record.md",
                     $"# new record {DateTime.Now:yyyy-MM-dd}"),
                 Times.Once);
         }
@@ -69,7 +69,7 @@ namespace AdrTool.Tests
             // assert
             InputOutputUtilsMock.Verify(
                 mock => mock.WriteFileAsync(
-                    "z:\\UnitTest\\docs\\folder\\0012-new record.md",
+                    "z:\\UnitTest\\docs\\folder\\0012-new-record.md",
                     $"# new record {DateTime.Now:yyyy-MM-dd}"),
                 Times.Once);
         }

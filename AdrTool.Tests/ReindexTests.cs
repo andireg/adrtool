@@ -34,7 +34,7 @@ namespace AdrTool.Tests
                 Times.Once);
             InputOutputUtilsMock.Verify(
                 mock => mock.WriteFileAsync(
-                    "z:\\UnitTest\\docs\\index.md",
+                    "z:\\UnitTest\\docs\\..\\docs.md",
                     @"# Index
 
 | Number | Title | Link |
