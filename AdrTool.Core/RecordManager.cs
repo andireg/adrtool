@@ -134,7 +134,12 @@ namespace AdrTool.Core
                 Environment.NewLine,
                 subFolders
                     .OrderBy(filename => filename)
-                    .Select(filename => Defaults.IndexFolderLineTemplate.FormatWithObject(new { folderName = inputOutputUtils.GetFileName(filename) })));
+                    .Select(filename => Defaults.IndexFolderLineTemplate.FormatWithObject(
+                        new
+                        {
+                            filename = $"{folderName}/{inputOutputUtils.GetFileName(filename)}",
+                            foldername = inputOutputUtils.GetFileName(filename),
+                        })));
 
             if (!string.IsNullOrWhiteSpace(contentFolders))
             {

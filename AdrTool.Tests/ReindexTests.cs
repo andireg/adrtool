@@ -39,7 +39,7 @@ namespace AdrTool.Tests
 
 | Number | Title | Link |
 | ---:| --- | --- |
-| | subfolder | [Link](subfolder.md) |
+| | subfolder | [Link](docs/subfolder.md) |
 | 0001 | document title | [Link](docs/0001-document title.md) |"),
                 Times.Once);
         }
