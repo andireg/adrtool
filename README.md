@@ -24,7 +24,7 @@ This command creates the default folder structure and places an initial template
 
 `adr add {title} [--folder {root-path}] [--template {template}]`
 
-ThHis command adds a new record file to the docs-folder. 
+This command adds a new record file to the docs-folder. 
 If the title contains slashes (or backslashes), the record file will be placed to subfolders.
 
 ## Reindexing
