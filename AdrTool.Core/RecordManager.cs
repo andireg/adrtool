@@ -20,7 +20,7 @@ namespace AdrTool.Core
             templatesFolder = inputOutputUtils.Combine(baseFolder, Defaults.TemplateFolder);
             docsFolder = inputOutputUtils.Combine(baseFolder, Defaults.DocsFolder);
             defaultTemplateFilename = inputOutputUtils.Combine(templatesFolder, $"{Defaults.DefaultTemplateName}.md");
-            regex = new (Defaults.DocFilename.Replace(".", "\\.").FormatWithObject(new { number = "([0-9]*)", title = "(.*)" }));
+            regex = new (Defaults.DocFilename.Replace(".", "\\.").FormatWithObject(new { number = "([0-9]{1,})", title = "(.*)" }));
         }
 
         public async Task InitAsync()
