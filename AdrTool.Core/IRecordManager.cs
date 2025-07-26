@@ -1,19 +1,20 @@
-﻿namespace AdrTool.Core
+﻿namespace AdrTool.Core;
+
+public interface IRecordManager
 {
-    public interface IRecordManager
-    {
-        Task AddRecordAsync(string title, string? template);
+    Task AddRecordAsync(string title, string? template);
 
-        void AddTemplate(string name);
+    void AddTemplate(string name);
 
-        Task InitAsync();
+    Task InitAsync();
 
-        IEnumerable<string> ListTemplates();
+    IEnumerable<string> ListTemplates();
 
-        Task ReindexAsync();
+    Task ReindexAsync();
 
-        void RemoveTemplate(string name);
+    void RemoveTemplate(string name);
 
-        void SetDefaultTemplate(string name);
-    }
+    Task SetConfigAsync(string key, string? value);
+
+    void SetDefaultTemplate(string name);
 }

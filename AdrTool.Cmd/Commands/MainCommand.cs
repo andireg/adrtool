@@ -9,6 +9,7 @@ namespace AdrTool.Cmd.Commands
             Description = "Manages youd architecure decision records";
 
             AddCommand(new InitCommand());
+            AddCommand(new ConfigCommand());
             AddCommand(new AddCommand());
             AddCommand(new ReindexCommand());
             AddCommand(new TemplateCommand());

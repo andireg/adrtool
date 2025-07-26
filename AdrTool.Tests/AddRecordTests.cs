@@ -11,7 +11,7 @@ namespace AdrTool.Tests
             // arrange
             InputOutputUtilsMock
                 .Setup(mock => mock.GetFiles("z:\\UnitTest\\docs\\folder"))
-                .Returns(new[] { "z:\\UnitTest\\docs\\folder\\0001-document title.md", "z:\\UnitTest\\docs\\folder\\0011-document title.md" });
+                .Returns(["z:\\UnitTest\\docs\\folder\\0001-document title.md", "z:\\UnitTest\\docs\\folder\\0011-document title.md"]);
             InputOutputUtilsMock
                 .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\templates\\default.md"))
                 .ReturnsAsync("# {%title} {%date:yyyy-MM-dd}");
@@ -23,6 +23,34 @@ namespace AdrTool.Tests
             InputOutputUtilsMock.Verify(
                 mock => mock.WriteFileAsync(
                     "z:\\UnitTest\\docs\\folder\\0012-new-record.md",
+                    $"# new record {DateTime.Now:yyyy-MM-dd}"),
+                Times.Once);
+        }
+
+        [Fact]
+        public async Task Verify_UseWithScope()
+        {
+            // arrange
+            InputOutputUtilsMock
+                .Setup(mock => mock.GetFiles("z:\\UnitTest\\docs\\folder"))
+                .Returns(["z:\\UnitTest\\docs\\folder\\MY_SCOPE0001-document title.md", "z:\\UnitTest\\docs\\folder\\MY_SCOPE0011-document title.md"]);
+            InputOutputUtilsMock
+                .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\templates\\default.md"))
+                .ReturnsAsync("# {%title} {%date:yyyy-MM-dd}");
+            InputOutputUtilsMock
+                .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\settings.json"))
+                .ReturnsAsync("{\"scope\": \"MY_SCOPE\"}");
+            InputOutputUtilsMock
+                .Setup(mock => mock.FileExists("z:\\UnitTest\\settings.json"))
+                .Returns(true);
+
+            // act
+            await RecordManager.AddRecordAsync("folder/new record", null);
+
+            // assert
+            InputOutputUtilsMock.Verify(
+                mock => mock.WriteFileAsync(
+                    "z:\\UnitTest\\docs\\folder\\MY_SCOPE0012-new-record.md",
                     $"# new record {DateTime.Now:yyyy-MM-dd}"),
                 Times.Once);
         }
