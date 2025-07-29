@@ -10,137 +10,49 @@ FNF:1
 FNH:0
 end_of_record
 SF:/home/andreas/Repos/adrtool/AdrTool.Core/RecordManager.cs
-FN:79,System.Threading.Tasks.Task AdrTool.Core.RecordManager::ReindexAsync()
+FN:82,System.Threading.Tasks.Task AdrTool.Core.RecordManager::ReindexAsync()
 FNDA:0,System.Threading.Tasks.Task AdrTool.Core.RecordManager::ReindexAsync()
-DA:80,0
-FN:101,System.Void AdrTool.Core.RecordManager::CheckDefaultTemplate()
+DA:83,0
+FN:104,System.Void AdrTool.Core.RecordManager::CheckDefaultTemplate()
 FNDA:0,System.Void AdrTool.Core.RecordManager::CheckDefaultTemplate()
-DA:102,0
-DA:103,0
-DA:104,0
 DA:105,0
+DA:106,0
+DA:107,0
 DA:108,0
-DA:109,0
-DA:110,0
 DA:111,0
+DA:112,0
+DA:113,0
 DA:114,0
-DA:115,0
-BRDA:103,20,0,0
-BRDA:103,20,1,0
-BRDA:108,43,0,0
-BRDA:108,43,1,0
-BRDA:109,63,0,0
-BRDA:109,63,1,0
-FN:117,System.Int32 AdrTool.Core.RecordManager::GetNextNumber(System.String)
-FNDA:0,System.Int32 AdrTool.Core.RecordManager::GetNextNumber(System.String)
+DA:117,0
 DA:118,0
-DA:119,0
-DA:120,0
+BRDA:106,20,0,0
+BRDA:106,20,1,0
+BRDA:111,43,0,0
+BRDA:111,43,1,0
+BRDA:112,63,0,0
+BRDA:112,63,1,0
+FN:120,System.Int32 AdrTool.Core.RecordManager::GetNextNumber(System.String)
+FNDA:0,System.Int32 AdrTool.Core.RecordManager::GetNextNumber(System.String)
 DA:121,0
+DA:122,0
 DA:123,0
 DA:124,0
-DA:125,0
 DA:126,0
 DA:127,0
 DA:128,0
 DA:129,0
-BRDA:119,12,0,0
-BRDA:119,12,1,0
-FN:174,System.Collections.Generic.IEnumerable`1<System.String> AdrTool.Core.RecordManager::ListTemplates()
-FNDA:0,System.Collections.Generic.IEnumerable`1<System.String> AdrTool.Core.RecordManager::ListTemplates()
-DA:175,0
-DA:176,0
-DA:177,0
-FN:179,System.Void AdrTool.Core.RecordManager::AddTemplate(System.String)
-FNDA:0,System.Void AdrTool.Core.RecordManager::AddTemplate(System.String)
-DA:180,0
-DA:181,0
-DA:182,0
-DA:183,0
-DA:184,0
-DA:187,0
-DA:188,0
-BRDA:182,23,0,0
-BRDA:182,23,1,0
-FN:190,System.Void AdrTool.Core.RecordManager::RemoveTemplate(System.String)
-FNDA:0,System.Void AdrTool.Core.RecordManager::RemoveTemplate(System.String)
-DA:191,0
-DA:192,0
-DA:193,0
-DA:194,0
-FN:196,System.Void AdrTool.Core.RecordManager::SetDefaultTemplate(System.String)
-FNDA:0,System.Void AdrTool.Core.RecordManager::SetDefaultTemplate(System.String)
-DA:197,0
-DA:198,0
-DA:199,0
-DA:200,0
-DA:201,0
-FN:203,System.String AdrTool.Core.RecordManager::CheckTemplateName(System.String)
-FNDA:0,System.String AdrTool.Core.RecordManager::CheckTemplateName(System.String)
-DA:204,0
-DA:205,0
-DA:206,0
-DA:207,0
-DA:208,0
-DA:211,0
-DA:212,0
-BRDA:206,26,0,0
-BRDA:206,26,1,0
-FN:214,System.String AdrTool.Core.RecordManager::CheckNonDefaultTemplateName(System.String)
-FNDA:0,System.String AdrTool.Core.RecordManager::CheckNonDefaultTemplateName(System.String)
-DA:215,0
-DA:216,0
-DA:217,0
-DA:218,0
-DA:221,0
-DA:222,0
-DA:223,0
-DA:226,0
-DA:227,0
-BRDA:216,9,0,0
-BRDA:216,9,1,0
-BRDA:221,37,0,0
-BRDA:221,37,1,0
-FN:24,System.Void AdrTool.Core.RecordManager::.ctor(AdrTool.Core.IInputOutputUtils,System.String)
-FNDA:0,System.Void AdrTool.Core.RecordManager::.ctor(AdrTool.Core.IInputOutputUtils,System.String)
-DA:25,0
-DA:26,0
-DA:27,0
-DA:28,0
-DA:29,0
-DA:30,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:34,0
-DA:35,0
-DA:37,0
-BRDA:34,152,0,0
-BRDA:34,152,1,0
-FN:10,System.Void AdrTool.Core.RecordManager::.cctor()
-FNDA:0,System.Void AdrTool.Core.RecordManager::.cctor()
-DA:11,0
-DA:12,0
-DA:13,0
-DA:14,0
-FN:138,System.Boolean AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_1(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-FNDA:0,System.Boolean AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_1(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-DA:139,0
-FN:139,System.Int32 AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_2(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-FNDA:0,System.Int32 AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_2(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-DA:140,0
-FN:154,System.String AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_4(System.String)
-FNDA:0,System.String AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__16_4(System.String)
-DA:155,0
-FN:86,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass13_0::<CheckTemplatesAsync>b__0(System.String)
-FNDA:0,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass13_0::<CheckTemplatesAsync>b__0(System.String)
-DA:87,0
-FN:137,<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match> AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__0(System.String)
-FNDA:0,<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match> AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__0(System.String)
+DA:130,0
+DA:131,0
+DA:132,0
+BRDA:122,12,0,0
+BRDA:122,12,1,0
+FN:134,System.String AdrTool.Core.RecordManager::GetCheckedFilename(System.String,System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager::GetCheckedFilename(System.String,System.String)
+DA:135,0
+DA:136,0
+DA:137,0
 DA:138,0
-FN:140,System.String AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__3(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-FNDA:0,System.String AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__3(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
-DA:141,0
+DA:139,0
 DA:142,0
 DA:143,0
 DA:144,0
@@ -148,36 +60,153 @@ DA:145,0
 DA:146,0
 DA:147,0
 DA:148,0
-FN:155,System.String AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__5(System.String)
-FNDA:0,System.String AdrTool.Core.RecordManager/<>c__DisplayClass16_0::<ReindexFolderAsync>b__5(System.String)
-DA:156,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:155,0
 DA:157,0
 DA:158,0
-DA:159,0
-DA:160,0
-DA:161,0
-FN:231,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass23_0::<SetConfigAsync>b__0(System.Reflection.PropertyInfo)
-FNDA:0,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass23_0::<SetConfigAsync>b__0(System.Reflection.PropertyInfo)
-DA:232,0
-FN:50,System.Void AdrTool.Core.RecordManager/<AddRecordAsync>d__11::MoveNext()
+BRDA:137,25,0,0
+BRDA:137,25,1,0
+BRDA:142,52,0,0
+BRDA:142,52,1,0
+BRDA:150,128,0,0
+BRDA:150,128,1,0
+FN:204,System.Collections.Generic.IEnumerable`1<System.String> AdrTool.Core.RecordManager::ListTemplates()
+FNDA:0,System.Collections.Generic.IEnumerable`1<System.String> AdrTool.Core.RecordManager::ListTemplates()
+DA:205,0
+DA:206,0
+DA:207,0
+FN:209,System.Void AdrTool.Core.RecordManager::AddTemplate(System.String)
+FNDA:0,System.Void AdrTool.Core.RecordManager::AddTemplate(System.String)
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:217,0
+DA:218,0
+BRDA:212,23,0,0
+BRDA:212,23,1,0
+FN:220,System.Void AdrTool.Core.RecordManager::RemoveTemplate(System.String)
+FNDA:0,System.Void AdrTool.Core.RecordManager::RemoveTemplate(System.String)
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+FN:226,System.Void AdrTool.Core.RecordManager::SetDefaultTemplate(System.String)
+FNDA:0,System.Void AdrTool.Core.RecordManager::SetDefaultTemplate(System.String)
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+FN:233,System.String AdrTool.Core.RecordManager::CheckTemplateName(System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager::CheckTemplateName(System.String)
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:241,0
+DA:242,0
+BRDA:236,26,0,0
+BRDA:236,26,1,0
+FN:244,System.String AdrTool.Core.RecordManager::CheckNonDefaultTemplateName(System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager::CheckNonDefaultTemplateName(System.String)
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:256,0
+DA:257,0
+BRDA:246,9,0,0
+BRDA:246,9,1,0
+BRDA:251,37,0,0
+BRDA:251,37,1,0
+FN:24,System.Void AdrTool.Core.RecordManager::.ctor(AdrTool.Core.IInputOutputUtils,System.String)
+FNDA:3,System.Void AdrTool.Core.RecordManager::.ctor(AdrTool.Core.IInputOutputUtils,System.String)
+DA:25,3
+DA:26,3
+DA:27,3
+DA:28,3
+DA:29,3
+DA:30,3
+DA:31,3
+DA:32,3
+DA:33,3
+DA:34,3
+DA:35,3
+DA:36,3
+DA:37,3
+DA:38,3
+DA:40,3
+FN:10,System.Void AdrTool.Core.RecordManager::.cctor()
+FNDA:1,System.Void AdrTool.Core.RecordManager::.cctor()
+DA:11,1
+DA:12,1
+DA:13,1
+DA:14,1
+FN:168,System.Boolean AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_2(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+FNDA:0,System.Boolean AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_2(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+DA:169,0
+FN:169,System.Int32 AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_3(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+FNDA:0,System.Int32 AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_3(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+DA:170,0
+FN:184,System.String AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_5(System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager/<>c::<ReindexFolderAsync>b__17_5(System.String)
+DA:185,0
+FN:89,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass13_0::<CheckTemplatesAsync>b__0(System.String)
+FNDA:0,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass13_0::<CheckTemplatesAsync>b__0(System.String)
+DA:90,0
+FN:166,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__0(System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__0(System.String)
+DA:167,0
+FN:167,<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match> AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__1(System.String)
+FNDA:0,<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match> AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__1(System.String)
+DA:168,0
+FN:170,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__4(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+FNDA:0,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__4(<>f__AnonymousType2`2<System.String,System.Text.RegularExpressions.Match>)
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+BRDA:171,22,0,0
+BRDA:171,22,1,0
+FN:185,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__6(System.String)
+FNDA:0,System.String AdrTool.Core.RecordManager/<>c__DisplayClass17_0::<ReindexFolderAsync>b__6(System.String)
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+FN:261,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass24_0::<SetConfigAsync>b__0(System.Reflection.PropertyInfo)
+FNDA:8,System.Boolean AdrTool.Core.RecordManager/<>c__DisplayClass24_0::<SetConfigAsync>b__0(System.Reflection.PropertyInfo)
+DA:262,8
+FN:53,System.Void AdrTool.Core.RecordManager/<AddRecordAsync>d__11::MoveNext()
 FNDA:0,System.Void AdrTool.Core.RecordManager/<AddRecordAsync>d__11::MoveNext()
-DA:51,0
-DA:52,0
-DA:53,0
 DA:54,0
 DA:55,0
 DA:56,0
+DA:57,0
 DA:58,0
 DA:59,0
-DA:60,0
 DA:61,0
 DA:62,0
 DA:63,0
 DA:64,0
 DA:65,0
+DA:66,0
 DA:67,0
 DA:68,0
-DA:69,0
 DA:70,0
 DA:71,0
 DA:72,0
@@ -186,19 +215,19 @@ DA:74,0
 DA:75,0
 DA:76,0
 DA:77,0
-BRDA:53,76,0,0
-BRDA:53,76,1,0
-BRDA:61,177,0,0
-BRDA:61,177,1,0
-FN:82,System.Void AdrTool.Core.RecordManager/<CheckTemplatesAsync>d__13::MoveNext()
+DA:78,0
+DA:79,0
+DA:80,0
+BRDA:56,76,0,0
+BRDA:56,76,1,0
+BRDA:64,177,0,0
+BRDA:64,177,1,0
+FN:85,System.Void AdrTool.Core.RecordManager/<CheckTemplatesAsync>d__13::MoveNext()
 FNDA:0,System.Void AdrTool.Core.RecordManager/<CheckTemplatesAsync>d__13::MoveNext()
-DA:83,0
-DA:84,0
-DA:85,0
 DA:86,0
+DA:87,0
 DA:88,0
 DA:89,0
-DA:90,0
 DA:91,0
 DA:92,0
 DA:93,0
@@ -208,130 +237,153 @@ DA:96,0
 DA:97,0
 DA:98,0
 DA:99,0
-BRDA:87,114,0,0
-BRDA:87,114,1,0
-BRDA:87,484,1,0
-BRDA:90,284,0,0
-BRDA:93,324,0,0
-BRDA:93,324,1,0
-BRDA:90,284,1,0
-BRDA:87,484,0,0
-FN:39,System.Void AdrTool.Core.RecordManager/<InitAsync>d__10::MoveNext()
+DA:100,0
+DA:101,0
+DA:102,0
+BRDA:90,114,0,0
+BRDA:90,114,1,0
+BRDA:90,484,1,0
+BRDA:93,284,0,0
+BRDA:96,324,0,0
+BRDA:96,324,1,0
+BRDA:93,284,1,0
+BRDA:90,484,0,0
+FN:42,System.Void AdrTool.Core.RecordManager/<InitAsync>d__10::MoveNext()
 FNDA:0,System.Void AdrTool.Core.RecordManager/<InitAsync>d__10::MoveNext()
-DA:40,0
-DA:41,0
-DA:42,0
 DA:43,0
+DA:44,0
 DA:45,0
 DA:46,0
-DA:47,0
 DA:48,0
-FN:243,System.Void AdrTool.Core.RecordManager/<ReadSettingsAsync>d__24::MoveNext()
-FNDA:0,System.Void AdrTool.Core.RecordManager/<ReadSettingsAsync>d__24::MoveNext()
-DA:244,0
-DA:245,0
-DA:246,0
-DA:247,0
-DA:248,0
-DA:251,0
-DA:252,0
-BRDA:245,44,0,0
-BRDA:248,209,0,0
-BRDA:248,209,1,0
-BRDA:245,44,1,0
-FN:131,System.Void AdrTool.Core.RecordManager/<ReindexFolderAsync>d__16::MoveNext()
-FNDA:0,System.Void AdrTool.Core.RecordManager/<ReindexFolderAsync>d__16::MoveNext()
-DA:132,0
-DA:133,0
-DA:134,0
-DA:135,0
-DA:136,0
-DA:137,0
-DA:150,0
-DA:152,0
-DA:153,0
-DA:154,0
+DA:49,0
+DA:50,0
+DA:51,0
+FN:290,System.Void AdrTool.Core.RecordManager/<ReadSettingsAsync>d__25::MoveNext()
+FNDA:3,System.Void AdrTool.Core.RecordManager/<ReadSettingsAsync>d__25::MoveNext()
+DA:291,3
+DA:292,3
+DA:293,3
+DA:294,3
+DA:295,3
+DA:298,0
+DA:299,3
+BRDA:292,44,0,3
+BRDA:295,209,0,0
+BRDA:295,209,1,3
+BRDA:292,44,1,0
+FN:160,System.Void AdrTool.Core.RecordManager/<ReindexFolderAsync>d__17::MoveNext()
+FNDA:0,System.Void AdrTool.Core.RecordManager/<ReindexFolderAsync>d__17::MoveNext()
+DA:161,0
+DA:162,0
 DA:163,0
 DA:164,0
 DA:165,0
 DA:166,0
-DA:168,0
-DA:169,0
-DA:170,0
-DA:171,0
-DA:172,0
-BRDA:163,395,0,0
-BRDA:163,395,1,0
-FN:229,System.Void AdrTool.Core.RecordManager/<SetConfigAsync>d__23::MoveNext()
-FNDA:0,System.Void AdrTool.Core.RecordManager/<SetConfigAsync>d__23::MoveNext()
-DA:230,0
-DA:231,0
-DA:233,0
-DA:234,0
-DA:235,0
-DA:238,0
-DA:240,0
-DA:241,0
-BRDA:233,121,0,0
-BRDA:233,121,1,0
-FN:254,System.Void AdrTool.Core.RecordManager/<WriteSettingsAsync>d__25::MoveNext()
-FNDA:0,System.Void AdrTool.Core.RecordManager/<WriteSettingsAsync>d__25::MoveNext()
-DA:255,0
-DA:256,0
-DA:257,0
-DA:258,0
-LF:180
-LH:0
-BRF:38
-BRH:0
-FNF:26
-FNH:0
+DA:180,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+BRDA:193,454,0,0
+BRDA:193,454,1,0
+FN:259,System.Void AdrTool.Core.RecordManager/<SetConfigAsync>d__24::MoveNext()
+FNDA:3,System.Void AdrTool.Core.RecordManager/<SetConfigAsync>d__24::MoveNext()
+DA:260,3
+DA:261,3
+DA:263,3
+DA:264,1
+DA:265,1
+DA:268,2
+DA:269,2
+DA:270,1
+DA:271,1
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,1
+DA:276,1
+DA:277,1
+DA:278,1
+DA:280,0
+DA:281,0
+DA:283,1
+DA:285,2
+DA:287,2
+DA:288,2
+BRDA:263,121,0,1
+BRDA:263,121,1,2
+BRDA:269,196,0,1
+BRDA:271,212,0,0
+BRDA:271,212,1,1
+BRDA:275,251,0,1
+BRDA:275,251,1,0
+BRDA:269,196,1,2
+FN:301,System.Void AdrTool.Core.RecordManager/<WriteSettingsAsync>d__26::MoveNext()
+FNDA:2,System.Void AdrTool.Core.RecordManager/<WriteSettingsAsync>d__26::MoveNext()
+DA:302,2
+DA:303,2
+DA:304,2
+DA:305,2
+LF:216
+LH:47
+BRF:50
+BRH:8
+FNF:28
+FNH:6
 end_of_record
 SF:/home/andreas/Repos/adrtool/AdrTool.Core/Settings.cs
 FN:5,System.String AdrTool.Core.Settings::get_Scope()
-FNDA:0,System.String AdrTool.Core.Settings::get_Scope()
-DA:6,0
+FNDA:8,System.String AdrTool.Core.Settings::get_Scope()
+DA:6,8
 FN:7,System.Boolean AdrTool.Core.Settings::get_UniqueNumbers()
-FNDA:0,System.Boolean AdrTool.Core.Settings::get_UniqueNumbers()
-DA:8,0
+FNDA:7,System.Boolean AdrTool.Core.Settings::get_UniqueNumbers()
+DA:8,7
 LF:2
-LH:0
+LH:2
 BRF:0
 BRH:0
 FNF:2
-FNH:0
+FNH:2
 end_of_record
 SF:/home/andreas/Repos/adrtool/AdrTool.Core/StringFormatter.cs
 FN:9,System.String AdrTool.Core.StringFormatter::FormatWithObject(System.String,System.Object)
-FNDA:0,System.String AdrTool.Core.StringFormatter::FormatWithObject(System.String,System.Object)
-DA:10,0
+FNDA:12,System.String AdrTool.Core.StringFormatter::FormatWithObject(System.String,System.Object)
+DA:10,12
 BRDA:10,46,0,0
-BRDA:10,46,1,0
+BRDA:10,46,1,9
 FN:12,System.String AdrTool.Core.StringFormatter::GetPropertyValue(System.Object,System.String,System.String)
-FNDA:0,System.String AdrTool.Core.StringFormatter::GetPropertyValue(System.Object,System.String,System.String)
-DA:13,0
-DA:14,0
-DA:15,0
+FNDA:9,System.String AdrTool.Core.StringFormatter::GetPropertyValue(System.Object,System.String,System.String)
+DA:13,9
+DA:14,9
+DA:15,9
 DA:16,0
 DA:17,0
-DA:20,0
-DA:21,0
-DA:22,0
-DA:25,0
-DA:26,0
+DA:20,9
+DA:21,6
+DA:22,6
+DA:25,3
+DA:26,9
 BRDA:14,14,0,0
-BRDA:14,14,1,0
+BRDA:14,14,1,9
 BRDA:15,34,0,0
-BRDA:15,34,1,0
-BRDA:20,49,0,0
-BRDA:20,49,1,0
+BRDA:15,34,1,9
+BRDA:20,49,0,6
+BRDA:20,49,1,3
 FN:6,System.Void AdrTool.Core.StringFormatter::.cctor()
-FNDA:0,System.Void AdrTool.Core.StringFormatter::.cctor()
-DA:7,0
+FNDA:1,System.Void AdrTool.Core.StringFormatter::.cctor()
+DA:7,1
 LF:12
-LH:0
+LH:10
 BRF:8
-BRH:0
+BRH:5
 FNF:3
-FNH:0
+FNH:3
 end_of_record

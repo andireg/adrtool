@@ -265,7 +265,24 @@ public class RecordManager : IRecordManager
             throw new ArgumentOutOfRangeException($"No config {key} found.");
         }
 
-        property.SetValue(settings, value);
+        object? valueToSet = value;
+        if( property.PropertyType == typeof(bool))
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                valueToSet = false;
+            }
+            else if (bool.TryParse(value, out bool boolValue))
+            {
+                valueToSet = boolValue;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException($"Invalid boolean value for {key}: {value}");
+            }
+        }
+
+        property.SetValue(settings, valueToSet);
 
         await WriteSettingsAsync();
     }
