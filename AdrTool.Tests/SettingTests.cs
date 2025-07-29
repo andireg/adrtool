@@ -10,17 +10,11 @@ public class SettingTests : TestBase
     {
         // arrange
         InputOutputUtilsMock
-    .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\settings.json"))
-    .ReturnsAsync("{\"scope\": \"MY_SCOPE\"}");
+            .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\settings.json"))
+            .ReturnsAsync("{\"scope\": \"MY_SCOPE\"}");
         InputOutputUtilsMock
             .Setup(mock => mock.FileExists("z:\\UnitTest\\settings.json"))
             .Returns(true);
-        InputOutputUtilsMock
-            .Setup(mock => mock.GetFiles("z:\\UnitTest\\docs"))
-            .Returns(new[] { "z:\\UnitTest\\docs\\0001-document title.md" });
-        InputOutputUtilsMock
-            .Setup(mock => mock.GetDirectories("z:\\UnitTest\\docs"))
-            .Returns(new[] { "z:\\UnitTest\\docs\\subfolder" });
 
         // act
         await Assert.ThrowsAsync<ArgumentOutOfRangeException>(
@@ -36,13 +30,7 @@ public class SettingTests : TestBase
             .ReturnsAsync("{\"scope\": \"MY_SCOPE\"}");
         InputOutputUtilsMock
             .Setup(mock => mock.FileExists("z:\\UnitTest\\settings.json"))
-                .Returns(true);
-        InputOutputUtilsMock
-            .Setup(mock => mock.GetFiles("z:\\UnitTest\\docs"))
-            .Returns(new[] { "z:\\UnitTest\\docs\\0001-document title.md" });
-        InputOutputUtilsMock
-            .Setup(mock => mock.GetDirectories("z:\\UnitTest\\docs"))
-            .Returns(new[] { "z:\\UnitTest\\docs\\subfolder" });
+            .Returns(true);
 
         // act
         await RecordManager.SetConfigAsync("Scope", "VALUE-SCOPY");
@@ -52,6 +40,28 @@ public class SettingTests : TestBase
             mock => mock.WriteFileAsync(
                 "z:\\UnitTest\\settings.json",
                 "{\"Scope\":\"VALUE-SCOPY\",\"UniqueNumbers\":false}"),
+            Times.Once);
+    }
+
+    [Fact]
+    public async Task When_SetConfigBoolValue_ThenSetValue()
+    {
+        // arrange
+        InputOutputUtilsMock
+            .Setup(mock => mock.ReadFileAsync("z:\\UnitTest\\settings.json"))
+            .ReturnsAsync("{\"uniqueNumbers\": false}");
+        InputOutputUtilsMock
+            .Setup(mock => mock.FileExists("z:\\UnitTest\\settings.json"))
+            .Returns(true);
+
+        // act
+        await RecordManager.SetConfigAsync("UniqueNumbers", "true");
+
+        // assert
+        InputOutputUtilsMock.Verify(
+            mock => mock.WriteFileAsync(
+                "z:\\UnitTest\\settings.json",
+                "{\"Scope\":\"\",\"UniqueNumbers\":true}"),
             Times.Once);
     }
 }
