@@ -32,7 +32,10 @@ public class RecordManager : IRecordManager
         defaultTemplateFilename = inputOutputUtils.Combine(templatesFolder, $"{Defaults.DefaultTemplateName}.md");
         settings = ReadSettingsAsync().GetAwaiter().GetResult();
         regex = new(Defaults.DocFilename.Replace(".", "\\.").FormatWithObject(
-            new { scope = settings?.Scope, number = "([0-9]{1,})", title = "([^\\\\\\/]*)" }));
+            new {
+                scope = string.Empty,
+                number = "([0-9]{1,})",
+                title = "([^\\\\\\/]*)" }));
 
     }
 
@@ -128,6 +131,32 @@ public class RecordManager : IRecordManager
         return max + 1;
     }
 
+    private string GetCheckedFilename(string filename, string folder)
+    {
+        Match match = regex.Match(filename);
+        if (!match.Success)
+        {
+            return filename;
+        }
+
+        string newFilename = Defaults.DocFilename.FormatWithObject(
+            new
+            {
+                scope = settings.Scope ?? string.Empty,
+                number = match.Groups[1].Value,
+                title = match.Groups[2].Value,
+            });
+
+        if (string.Equals(newFilename, inputOutputUtils.GetFileName(filename), StringComparison.Ordinal))
+        {
+            return filename;
+        }
+
+        inputOutputUtils.RenameFile(Path.Combine(folder, filename), Path.Combine(folder, newFilename));
+
+        return newFilename;
+    }
+
     private async Task ReindexFolderAsync(string folder)
     {
         Debug.WriteLine($"Reindex '{folder}'");
@@ -135,13 +164,14 @@ public class RecordManager : IRecordManager
         string contentFiles = string.Join(
             Environment.NewLine,
             inputOutputUtils.GetFiles(folder)
+                .Select(filename => GetCheckedFilename(filename, folder))
                 .Select(filename => new { filename, match = regex.Match(filename) })
                 .Where(item => item.match.Success)
                 .OrderBy(item => int.Parse(item.match.Groups[1].Value))
                 .Select(item => Defaults.IndexFileLineTemplate.FormatWithObject(
-                    new 
-                    { 
-                        scope = settings.Scope,
+                    new
+                    {
+                        scope = settings.Scope ?? string.Empty,
                         number = item.match.Groups[1].Value,
                         title = item.match.Groups[2].Value.Replace("-", " "),
                         filename = $"{folderName}/{inputOutputUtils.GetFileName(item.filename)}",

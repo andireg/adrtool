@@ -67,4 +67,7 @@ public class InputOutputUtils : IInputOutputUtils
         using FileStream fileStream = File.Create(filename);
         await content.CopyToAsync(fileStream);
     }
+
+    public void RenameFile(string sourceFilename, string targetFilename)
+        => File.Move(sourceFilename, targetFilename);
 }

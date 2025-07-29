@@ -6,6 +6,8 @@ public interface IInputOutputUtils
 
     void CopyFile(string sourceFilename, string targetFilename);
 
+    void RenameFile(string sourceFilename, string targetFilename);
+
     void DeleteFile(string filename);
 
     void EnsureFolderExistence(string path);
@@ -21,7 +23,7 @@ public interface IInputOutputUtils
     IEnumerable<string> GetFiles(string path);
 
     Task<string> ReadFileAsync(string filename);
-
+    
     Task WriteFileAsync(string filename, string content);
 
     Task WriteFileAsync(string filename, Stream content);
